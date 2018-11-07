@@ -70,12 +70,12 @@ private static void searchDog(){
             }
             else {
                 while (dogsRs.next()){
+                    int id = dogsRs.getInt("id");
                     String name = dogsRs.getString("name");
                     int age = dogsRs.getInt("age");
                     double weight = dogsRs.getDouble("weight");
                     boolean vax = dogsRs.getBoolean("vax");
-                    int id = dogsRs.getInt("ID");
-                    System.out.printf("Name %s, age %d, weight %f, vaccinated %s\n",id,name,age,weight,vax);
+                    System.out.printf("ID %d Name %s, age %d, weight %f, vaccinated %s\n",id,name,age,weight,vax);
 
                 }
             }
